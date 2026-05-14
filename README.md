@@ -1,4 +1,16 @@
-# Cyber-Architect Portfolio // Backend Architecture & AI Orchestration
+<h1 align="center">CYBER-ARCHITECT // Samuel Urrego</h1>
+
+<p align="center">
+  <strong>Portfolio terminal de alto rendimiento diseñado para la orquestación de sistemas y arquitecturas backend.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Astro-4.0-BC52EE?style=flat-square&logo=astro" alt="Astro 4.0" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwindcss" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/i18n-Native-FF5722?style=flat-square" alt="i18n Native" />
+  <img src="https://img.shields.io/badge/Atomic-Design-4CAF50?style=flat-square" alt="Atomic Design" />
+</p>
 
 A high-performance, responsive portfolio built with **Astro 4.0**, **Tailwind CSS**, and **TypeScript**. Designed for Backend Architects and AI Orchestrators who value system logic, information density, and terminal-grade aesthetics.
 
