@@ -1,0 +1,42 @@
+---
+interface Props {
+	label: string;
+	href?: string;
+	variant?: 'primary' | 'secondary' | 'outline';
+	size?: 'sm' | 'md' | 'lg';
+	class?: string;
+}
+
+const { 
+	label, 
+	href, 
+	variant = 'primary', 
+	size = 'md',
+	class: className = ''
+} = Astro.props;
+
+const variants = {
+	primary: 'bg-purple-600 text-white shadow-[4px_4px_0px_0px_rgba(236,72,153,1)] hover:bg-purple-500',
+	secondary: 'bg-magenta-500 text-white shadow-[4px_4px_0px_0px_rgba(168,85,247,1)] hover:bg-magenta-400',
+	outline: 'bg-transparent text-zinc-100 border-2 border-zinc-700 shadow-[4px_4px_0px_0px_rgba(168,85,247,0.3)] hover:border-purple-500'
+};
+
+const sizes = {
+	sm: 'px-3 py-1.5 text-[10px]',
+	md: 'px-4 py-2 text-xs',
+	lg: 'px-8 py-4 text-xl'
+};
+
+const baseStyles = 'font-outfit tracking-widest uppercase transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] inline-block text-center';
+const combinedStyles = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+---
+
+{href ? (
+	<a href={href} class={combinedStyles}>
+		{label}
+	</a>
+) : (
+	<button class={combinedStyles}>
+		{label}
+	</button>
+)}

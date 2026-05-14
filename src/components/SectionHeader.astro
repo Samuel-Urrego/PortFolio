@@ -1,0 +1,20 @@
+---
+interface Props {
+	title: string;
+	align?: 'left' | 'right';
+	accentColor?: 'purple' | 'magenta';
+}
+
+const { title, align = 'left', accentColor = 'purple' } = Astro.props;
+
+const borderColors = {
+	purple: 'border-purple-600',
+	magenta: 'border-magenta-500'
+};
+---
+
+<div class={`flex ${align === 'right' ? 'justify-end' : 'justify-start'} mb-12`}>
+	<h2 class={`font-outfit text-4xl uppercase scramble ${align === 'left' ? `border-l-4 pl-6 ${borderColors[accentColor]}` : 'text-right'}`}>
+		{title}
+	</h2>
+</div>

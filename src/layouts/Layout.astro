@@ -1,0 +1,241 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguagePicker from '../components/LanguagePicker.astro';
+
+interface Props {
+	title: string;
+	lang?: 'en' | 'es';
+}
+
+const { title } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portfolio of a Backend Architect & AI Orchestrator" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-zinc-950 text-zinc-100 font-inter selection:bg-purple-500/30 overflow-x-hidden">
+		<!-- Matrix Rain Canvas -->
+		<canvas id="matrix-rain" class="fixed inset-0 pointer-events-none z-0 opacity-[0.25]"></canvas>
+		
+		<!-- Noise Overlay -->
+		<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[102] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+		
+		<div class="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.05),transparent_80%)] pointer-events-none"></div>
+		
+		<header class="relative z-50 max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
+			<div class="font-outfit text-sm tracking-widest uppercase scramble shrink-0">
+				Samuel Esteban Urrego Valencia
+			</div>
+			
+			<!-- Desktop Nav -->
+			<nav class="hidden md:flex items-center gap-8 font-outfit text-xs tracking-widest uppercase text-zinc-400">
+				<a href="#stack" class="hover:text-purple-400 transition-colors">{t('nav.stack')}</a>
+				<a href="#projects" class="hover:text-purple-400 transition-colors">{t('nav.projects')}</a>
+				<a href="#log" class="hover:text-purple-400 transition-colors">{t('nav.log')}</a>
+				<a href="mailto:urregodev@gmail.com" class="hover:text-purple-400 transition-colors">{t('nav.connect')}</a>
+				<LanguagePicker />
+			</nav>
+
+			<!-- Mobile Toggle -->
+			<button id="menu-toggle" class="md:hidden text-purple-400 p-2 border border-purple-400/20">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+			</button>
+			
+			<button class="hidden lg:block bg-purple-600 text-white font-outfit text-xs tracking-widest uppercase px-4 py-2 hover:bg-purple-500 transition-colors shadow-[4px_4px_0px_0px_rgba(236,72,153,1)]">
+				Resume.PDF
+			</button>
+		</header>
+
+		<!-- Mobile Menu Overlay -->
+		<div id="mobile-menu" class="fixed inset-0 bg-zinc-950 z-[60] flex flex-col items-center justify-center gap-8 font-outfit text-2xl tracking-[0.2em] uppercase transition-all duration-500 translate-x-full">
+			<button id="menu-close" class="absolute top-8 right-6 text-purple-400">
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+			</button>
+			<a href="#stack" class="mobile-link hover:text-purple-400">{t('nav.stack')}</a>
+			<a href="#projects" class="mobile-link hover:text-purple-400">{t('nav.projects')}</a>
+			<a href="#log" class="mobile-link hover:text-purple-400">{t('nav.log')}</a>
+			<a href="mailto:urregodev@gmail.com" class="mobile-link hover:text-purple-400">{t('nav.connect')}</a>
+			<div class="mt-8">
+				<LanguagePicker />
+			</div>
+		</div>
+
+		<main class="relative z-10 max-w-7xl mx-auto px-6">
+			<slot />
+		</main>
+
+		<footer class="relative z-10 max-w-7xl mx-auto px-6 py-12 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-zinc-500 font-mono">
+			<div class="flex gap-6">
+				<a href="https://github.com/Samuel-Urrego" target="_blank" class="hover:text-purple-400 transition-colors">GITHUB</a>
+				<span class="opacity-30">{t('footer.linkedin')}</span>
+				<a href="mailto:urregodev@gmail.com" class="hover:text-purple-400 transition-colors">{t('nav.connect')}</a>
+			</div>
+			<div>
+				{t('footer.rights')}
+			</div>
+		</footer>
+
+		<script is:inline>
+			class TextScramble {
+				constructor(el) {
+					this.el = el;
+					this.chars = '!<>-_\\/[]{}—=+*^?#________';
+					this.update = this.update.bind(this);
+				}
+				setText(newText) {
+					const oldText = this.el.innerText;
+					const length = Math.max(oldText.length, newText.length);
+					const promise = new Promise((resolve) => (this.resolve = resolve));
+					this.queue = [];
+					for (let i = 0; i < length; i++) {
+						const from = oldText[i] || '';
+						const to = newText[i] || '';
+						const start = Math.floor(Math.random() * 40);
+						const end = start + Math.floor(Math.random() * 40);
+						this.queue.push({ from, to, start, end });
+					}
+					cancelAnimationFrame(this.frameRequest);
+					this.frame = 0;
+					this.update();
+					return promise;
+				}
+				update() {
+					let output = '';
+					let complete = 0;
+					for (let i = 0, n = this.queue.length; i < n; i++) {
+						let { from, to, start, end, char } = this.queue[i];
+						if (this.frame >= end) {
+							complete++;
+							output += to;
+						} else if (this.frame >= start) {
+							if (!char || Math.random() < 0.28) {
+								char = this.randomChar();
+								this.queue[i].char = char;
+							}
+							output += `<span class="opacity-50 text-purple-400">${char}</span>`;
+						} else {
+							output += from;
+						}
+					}
+					this.el.innerHTML = output;
+					if (complete === this.queue.length) {
+						this.resolve();
+					} else {
+						this.frameRequest = requestAnimationFrame(this.update);
+						this.frame++;
+					}
+				}
+				randomChar() {
+					return this.chars[Math.floor(Math.random() * this.chars.length)];
+				}
+			}
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const fx = new TextScramble(entry.target);
+						fx.setText(entry.target.getAttribute('data-text') || entry.target.innerText);
+						observer.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.5 });
+
+			document.querySelectorAll('.scramble').forEach(el => {
+				if (!el.getAttribute('data-text')) {
+					el.setAttribute('data-text', el.innerText);
+					el.innerText = '';
+				}
+				observer.observe(el);
+			});
+
+			// Mobile Menu Logic
+			const menuToggle = document.getElementById('menu-toggle');
+			const menuClose = document.getElementById('menu-close');
+			const mobileMenu = document.getElementById('mobile-menu');
+			const mobileLinks = document.querySelectorAll('.mobile-link');
+
+			const toggleMenu = () => {
+				mobileMenu.classList.toggle('translate-x-full');
+				document.body.classList.toggle('overflow-hidden');
+			};
+
+			menuToggle?.addEventListener('click', toggleMenu);
+			menuClose?.addEventListener('click', toggleMenu);
+			mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+			// Matrix Rain Logic
+			const canvas = document.getElementById('matrix-rain');
+			const ctx = canvas.getContext('2d');
+			let width, height, columns;
+			const fontSize = 16;
+			const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&*()';
+			let drops = [];
+
+			function resize() {
+				width = canvas.width = window.innerWidth;
+				height = canvas.height = window.innerHeight;
+				columns = Math.floor(width / fontSize);
+				drops = new Array(columns).fill(1);
+			}
+
+			window.addEventListener('resize', resize);
+			resize();
+
+			function draw() {
+				ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+				ctx.fillRect(0, 0, width, height);
+
+				ctx.fillStyle = '#d946ef'; // Fuchsia-500
+				ctx.shadowBlur = 8;
+				ctx.shadowColor = '#d946ef';
+				ctx.font = `${fontSize}px monospace`;
+
+				for (let i = 0; i < drops.length; i++) {
+					const text = chars.charAt(Math.floor(Math.random() * chars.length));
+					ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+					if (drops[i] * fontSize > height && Math.random() > 0.975) {
+						drops[i] = 0;
+					}
+					drops[i]++;
+				}
+			}
+
+			setInterval(draw, 33);
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--font-outfit: 'Outfit', sans-serif;
+		--font-inter: 'Inter', sans-serif;
+		--font-mono: 'JetBrains Mono', monospace;
+	}
+	
+	.font-outfit { font-family: var(--font-outfit); }
+	.font-inter { font-family: var(--font-inter); }
+	.font-mono { font-family: var(--font-mono); }
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	::selection {
+		background-color: rgba(168, 85, 247, 0.4);
+		color: white;
+	}
+</style>
