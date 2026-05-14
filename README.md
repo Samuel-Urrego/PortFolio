@@ -1,7 +1,7 @@
 <h1 align="center">CYBER-ARCHITECT // Samuel Urrego</h1>
 
 <p align="center">
-  <strong>Portfolio terminal de alto rendimiento diseñado para la orquestación de sistemas y arquitecturas backend.</strong>
+  <strong>High-performance terminal portfolio engineered for system orchestration and backend architectures.</strong>
 </p>
 
 <p align="center">
