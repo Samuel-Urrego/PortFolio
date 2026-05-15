@@ -79,6 +79,14 @@ export const projectsContent = {
       tags: ['FastAPI', 'RAG', 'Pinecone', 'Telegram'],
       repoUrl: "https://github.com/Samuel-Urrego/ChatBotVectorialDB/tree/MedicineBOT",
       demoUrl: "https://t.me/MedicineExampleV1_bot"
+    },
+    {
+      id: "LIB_01",
+      name: "ARAXYS",
+      description: "Plug & Play security library for FastAPI. Provides enterprise-grade protection with rate limiting, honeypots, JWT rotation, and encrypted audit logging.",
+      tags: ['Python', 'FastAPI', 'Security', 'PyPI'],
+      repoUrl: "https://github.com/Samuel-Urrego/Araxys",
+      demoUrl: "https://pypi.org/project/araxys/"
     }
   ],
   es: [
@@ -113,12 +121,25 @@ export const projectsContent = {
       tags: ['FastAPI', 'RAG', 'Pinecone', 'Telegram'],
       repoUrl: "https://github.com/Samuel-Urrego/ChatBotVectorialDB/tree/MedicineBOT",
       demoUrl: "https://t.me/MedicineExampleV1_bot"
+    },
+    {
+      id: "LIB_01",
+      name: "ARAXYS",
+      description: "Librería de seguridad Plug & Play para FastAPI. Proporciona protección de grado empresarial con limitación de tasa, honeypots, rotación de JWT y registros de auditoría cifrados.",
+      tags: ['Python', 'FastAPI', 'Seguridad', 'PyPI'],
+      repoUrl: "https://github.com/Samuel-Urrego/Araxys",
+      demoUrl: "https://pypi.org/project/araxys/"
     }
   ]
 };
 
 export const logsContent = {
   en: [
+    {
+      date: "2026.05.15 @ 12:00:00",
+      title: "ARAXYS SECURITY LIB RELEASE",
+      description: "Published Araxys to PyPI, offering a comprehensive security suite for FastAPI developers to implement enterprise-grade protection with minimal configuration."
+    },
     {
       date: "2026.05.10 @ 10:00:00",
       title: "SQL SECURITY OPTIMIZATION",
@@ -136,6 +157,11 @@ export const logsContent = {
     }
   ],
   es: [
+    {
+      date: "15.05.2026 @ 12:00:00",
+      title: "LANZAMIENTO DE ARAXYS SECURITY LIB",
+      description: "Publicación de Araxys en PyPI, ofreciendo una suite de seguridad integral para desarrolladores FastAPI para implementar protección empresarial con mínima configuración."
+    },
     {
       date: "10.05.2026 @ 10:00:00",
       title: "OPTIMIZACIÓN DE SEGURIDAD SQL",
