@@ -54,7 +54,8 @@ export const projectsContent = {
       description: "Advanced task management system designed to streamline workflows and improve productivity. Implemented with a robust FastAPI backend.",
       tags: ['FastAPI', 'React', 'Tailwind', 'OpenAI API'],
       repoUrl: "https://github.com/Samuel-Urrego/ReaverAPP",
-      demoUrl: "https://reaver-9qpb.onrender.com"
+      demoUrl: "https://reaver-9qpb.onrender.com",
+      image: "/reaverlogo.jpg"
     },
     {
       id: "PROJECT_02",
@@ -62,7 +63,8 @@ export const projectsContent = {
       description: "Automated inventory and cash management system. Facilitates real-time tracking and financial oversight for retail operations.",
       tags: ['FastAPI', 'React', 'Tailwind', 'OpenAI API'],
       repoUrl: "https://github.com/Samuel-Urrego/Gaia",
-      demoUrl: "https://amorycerezas-frontend.onrender.com/login"
+      demoUrl: "https://amorycerezas-frontend.onrender.com/login",
+      image: "/gaialogo.png"
     },
     {
       id: "BOT_01",
@@ -70,7 +72,8 @@ export const projectsContent = {
       description: "Vector-based FAQ bot utilizing RAG architecture to provide precise answers from technical documentation.",
       tags: ['FastAPI', 'RAG', 'Pinecone', 'Telegram'],
       repoUrl: "https://github.com/Samuel-Urrego/ChatBotVectorialDB/tree/FAQTI",
-      demoUrl: "https://t.me/FAQTIExampleV1_bot"
+      demoUrl: "https://t.me/FAQTIExampleV1_bot",
+      image: "/faqbotlogo.jpeg"
     },
     {
       id: "BOT_02",
@@ -78,7 +81,8 @@ export const projectsContent = {
       description: "Medical knowledge bot leveraging RAG and vector databases to navigate complex clinical information.",
       tags: ['FastAPI', 'RAG', 'Pinecone', 'Telegram'],
       repoUrl: "https://github.com/Samuel-Urrego/ChatBotVectorialDB/tree/MedicineBOT",
-      demoUrl: "https://t.me/MedicineExampleV1_bot"
+      demoUrl: "https://t.me/MedicineExampleV1_bot",
+      image: "/medicinebotlogo.png"
     },
     {
       id: "LIB_01",
@@ -86,7 +90,8 @@ export const projectsContent = {
       description: "Plug & Play security library for FastAPI. Provides enterprise-grade protection with rate limiting, honeypots, JWT rotation, and encrypted audit logging.",
       tags: ['Python', 'FastAPI', 'Security', 'PyPI'],
       repoUrl: "https://github.com/Samuel-Urrego/Araxys",
-      demoUrl: "https://pypi.org/project/araxys/"
+      demoUrl: "https://pypi.org/project/araxys/",
+      image: "/araxyslogo.png"
     }
   ],
   es: [
@@ -96,7 +101,8 @@ export const projectsContent = {
       description: "Sistema avanzado de gestión de tareas diseñado para optimizar flujos de trabajo y mejorar la productividad. Implementado con un backend robusto en FastAPI.",
       tags: ['FastAPI', 'React', 'Tailwind', 'OpenAI API'],
       repoUrl: "https://github.com/Samuel-Urrego/ReaverAPP",
-      demoUrl: "https://reaver-9qpb.onrender.com"
+      demoUrl: "https://reaver-9qpb.onrender.com",
+      image: "/reaverlogo.jpg"
     },
     {
       id: "PROYECTO_02",
@@ -104,7 +110,8 @@ export const projectsContent = {
       description: "Sistema automatizado de gestión de inventarios y caja. Facilita el seguimiento en tiempo real y la supervisión financiera para operaciones minoristas.",
       tags: ['FastAPI', 'React', 'Tailwind', 'OpenAI API'],
       repoUrl: "https://github.com/Samuel-Urrego/Gaia",
-      demoUrl: "https://amorycerezas-frontend.onrender.com/login"
+      demoUrl: "https://amorycerezas-frontend.onrender.com/login",
+      image: "/gaialogo.png"
     },
     {
       id: "BOT_01",
@@ -112,7 +119,8 @@ export const projectsContent = {
       description: "Bot de preguntas frecuentes basado en vectores que utiliza arquitectura RAG para proporcionar respuestas precisas a partir de documentación técnica.",
       tags: ['FastAPI', 'RAG', 'Pinecone', 'Telegram'],
       repoUrl: "https://github.com/Samuel-Urrego/ChatBotVectorialDB/tree/FAQTI",
-      demoUrl: "https://t.me/FAQTIExampleV1_bot"
+      demoUrl: "https://t.me/FAQTIExampleV1_bot",
+      image: "/faqbotlogo.jpeg"
     },
     {
       id: "BOT_02",
@@ -120,7 +128,8 @@ export const projectsContent = {
       description: "Bot de conocimientos médicos que aprovecha bases de datos vectoriales y RAG para navegar por información clínica compleja.",
       tags: ['FastAPI', 'RAG', 'Pinecone', 'Telegram'],
       repoUrl: "https://github.com/Samuel-Urrego/ChatBotVectorialDB/tree/MedicineBOT",
-      demoUrl: "https://t.me/MedicineExampleV1_bot"
+      demoUrl: "https://t.me/MedicineExampleV1_bot",
+      image: "/medicinebotlogo.png"
     },
     {
       id: "LIB_01",
@@ -128,7 +137,8 @@ export const projectsContent = {
       description: "Librería de seguridad Plug & Play para FastAPI. Proporciona protección de grado empresarial con limitación de tasa, honeypots, rotación de JWT y registros de auditoría cifrados.",
       tags: ['Python', 'FastAPI', 'Seguridad', 'PyPI'],
       repoUrl: "https://github.com/Samuel-Urrego/Araxys",
-      demoUrl: "https://pypi.org/project/araxys/"
+      demoUrl: "https://pypi.org/project/araxys/",
+      image: "/araxyslogo.png"
     }
   ]
 };
