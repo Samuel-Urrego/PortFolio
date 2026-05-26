@@ -92,6 +92,15 @@ export const projectsContent = {
       repoUrl: "https://github.com/Samuel-Urrego/Araxys",
       demoUrl: "https://pypi.org/project/araxys/",
       image: "/araxyslogo.png"
+    },
+    {
+      id: "LIB_02",
+      name: "SINGULARITYSQL",
+      description: "Python library + CLI that bridges SQL Server and Pydantic v2. Auto-generates typed data models from stored procedure metadata — zero manual mapping. Three version strategies (Modern, Legacy, Azure).",
+      tags: ['Python', 'SQL Server', 'Pydantic v2', 'CLI'],
+      repoUrl: "https://github.com/Samuel-Urrego/Singularity",
+      demoUrl: "https://pypi.org/project/singularitysql/",
+      image: "/singularity-logo.png"
     }
   ],
   es: [
@@ -139,12 +148,26 @@ export const projectsContent = {
       repoUrl: "https://github.com/Samuel-Urrego/Araxys",
       demoUrl: "https://pypi.org/project/araxys/",
       image: "/araxyslogo.png"
+    },
+    {
+      id: "LIB_02",
+      name: "SINGULARITYSQL",
+      description: "Librería Python + CLI que conecta SQL Server con Pydantic v2. Auto-genera modelos de datos tipados a partir de metadatos de stored procedures — sin mapeo manual. Tres estrategias de versión (Modern, Legacy, Azure).",
+      tags: ['Python', 'SQL Server', 'Pydantic v2', 'CLI'],
+      repoUrl: "https://github.com/Samuel-Urrego/Singularity",
+      demoUrl: "https://pypi.org/project/singularitysql/",
+      image: "/singularity-logo.png"
     }
   ]
 };
 
 export const logsContent = {
   en: [
+    {
+      date: "2026.05.26 @ 14:30:00",
+      title: "SINGULARITYSQL LIB RELEASE",
+      description: "Published SingularitySQL to PyPI — a Python library + CLI that auto-generates Pydantic v2 models from SQL Server stored procedure metadata with zero manual mapping."
+    },
     {
       date: "2026.05.15 @ 12:00:00",
       title: "ARAXYS SECURITY LIB RELEASE",
@@ -167,6 +190,11 @@ export const logsContent = {
     }
   ],
   es: [
+    {
+      date: "26.05.2026 @ 14:30:00",
+      title: "LANZAMIENTO DE SINGULARITYSQL LIB",
+      description: "Publicación de SingularitySQL en PyPI — una librería Python + CLI que auto-genera modelos Pydantic v2 desde metadatos de stored procedures de SQL Server sin mapeo manual."
+    },
     {
       date: "15.05.2026 @ 12:00:00",
       title: "LANZAMIENTO DE ARAXYS SECURITY LIB",
