@@ -4,7 +4,7 @@ interface Props {
 	name: string;
 	description: string;
 	tags: string[];
-	repoUrl: string;
+	repoUrl?: string;
 	demoUrl?: string;
 	image?: string;
 	variant?: 'compact' | 'detailed';
@@ -26,7 +26,11 @@ const { id, name, description, tags, repoUrl, demoUrl, image, variant = 'detaile
 						{description}
 					</p>
 					<div class="flex gap-4">
-						<a href={repoUrl} class="flex-1 bg-black text-white font-mono text-[10px] py-2 border border-zinc-700 hover:bg-zinc-800 text-center">| REPO |</a>
+						{repoUrl ? (
+							<a href={repoUrl} class="flex-1 bg-black text-white font-mono text-[10px] py-2 border border-zinc-700 hover:bg-zinc-800 text-center">| REPO |</a>
+						) : (
+							<span class="flex-1 bg-zinc-900 text-zinc-600 font-mono text-[10px] py-2 border border-zinc-800 text-center cursor-not-allowed">| PRIVATE |</span>
+						)}
 						{demoUrl && <a href={demoUrl} class="flex-1 bg-white text-black font-mono text-[10px] py-2 border border-white hover:bg-zinc-200 text-center">| DEMO |</a>}
 					</div>
 				</div>
@@ -61,7 +65,11 @@ const { id, name, description, tags, repoUrl, demoUrl, image, variant = 'detaile
 						))}
 					</div>
 					<p class="font-mono text-xs text-zinc-400">"{description}"</p>
-					<a href={repoUrl} class="block w-full bg-purple-600 text-white font-mono text-[10px] py-3 hover:bg-purple-500 uppercase tracking-widest font-bold text-center">| REPO |</a>
+					{repoUrl ? (
+						<a href={repoUrl} class="block w-full bg-purple-600 text-white font-mono text-[10px] py-3 hover:bg-purple-500 uppercase tracking-widest font-bold text-center">| REPO |</a>
+					) : (
+						<span class="block w-full bg-zinc-800 text-zinc-600 font-mono text-[10px] py-3 uppercase tracking-widest font-bold text-center cursor-not-allowed">| PRIVATE |</span>
+					)}
 				</div>
 			</>
 		)}

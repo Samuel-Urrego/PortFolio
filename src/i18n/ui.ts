@@ -87,8 +87,8 @@ export const projectsContent = {
     {
       id: "LIB_01",
       name: "ARAXYS",
-      description: "Plug & Play security library for FastAPI. Provides enterprise-grade protection with rate limiting, honeypots, JWT rotation, and encrypted audit logging.",
-      tags: ['Python', 'FastAPI', 'Security', 'PyPI'],
+      description: "Enterprise-grade Plug & Play security library for FastAPI. 33+ modules: CORS, JWT, Rate Limiting, MFA, WebAuthn, OAuth2, RBAC, Prompt Injection, Malware Scan, XXE Protection, AWS WAF Bridge, Threat Intelligence (8 sources), GraphQL Security, Dynamic Secrets Rotation, and Encrypted Audit Logging. 1958 tests.",
+      tags: ['Python', 'FastAPI', 'Security', 'PyPI', 'AWS WAF'],
       repoUrl: "https://github.com/Samuel-Urrego/Araxys",
       demoUrl: "https://pypi.org/project/araxys/",
       image: "/araxyslogo.png"
@@ -96,11 +96,26 @@ export const projectsContent = {
     {
       id: "LIB_02",
       name: "SINGULARITYSQL",
-      description: "Python library + CLI that bridges SQL Server and Pydantic v2. Auto-generates typed data models from stored procedure metadata — zero manual mapping. Three version strategies (Modern, Legacy, Azure).",
-      tags: ['Python', 'SQL Server', 'Pydantic v2', 'CLI'],
+      description: "Python library + CLI bridging SQL Server and Pydantic v2. Auto-generates typed data models from stored procedure metadata — zero manual mapping. Three version strategies: Modern (2016+), Legacy (2008-2014), Azure SQL. Dynamic runtime or source code output.",
+      tags: ['Python', 'SQL Server', 'Pydantic v2', 'CLI', 'Code Gen'],
       repoUrl: "https://github.com/Samuel-Urrego/Singularity",
       demoUrl: "https://pypi.org/project/singularitysql/",
       image: "/singularity-logo.png"
+    },
+    {
+      id: "MCP_01",
+      name: "SQLSERVERMCP",
+      description: "MCP (Model Context Protocol) server for SQL Server built with .NET 10. Lets AI agents explore database schemas, indexes, stored procedures, and execute read-only queries. 7 tools with defense-in-depth security: db_datareader + query validator + ReadOnly intent.",
+      tags: ['.NET 10', 'MCP', 'SQL Server', 'C#', 'AI Agents'],
+      repoUrl: "https://github.com/Samuel-Urrego/SQLSERVERMCP",
+      image: "/sqlservermcp-logo.png"
+    },
+    {
+      id: "PROJECT_03",
+      name: "SUITE",
+      description: "Enterprise corporate portal for Porcicarnes S.A. Built with .NET 10, Blazor, and Clean Architecture. 11 modules: IT Support, Accounting, Transport, HR, Payroll, Marketing, and more. Integrates Microsoft Entra ID, APICENTRAL Gateway, DIAN, SharePoint, and Google Maps. Dapper + stored procedures with audit trail across 83+ SPs and 168 tests.",
+      tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'MudBlazor', 'SQL Server', 'Entra ID'],
+      repoUrl: undefined
     }
   ],
   es: [
@@ -143,8 +158,8 @@ export const projectsContent = {
     {
       id: "LIB_01",
       name: "ARAXYS",
-      description: "Librería de seguridad Plug & Play para FastAPI. Proporciona protección de grado empresarial con limitación de tasa, honeypots, rotación de JWT y registros de auditoría cifrados.",
-      tags: ['Python', 'FastAPI', 'Seguridad', 'PyPI'],
+      description: "Librería de seguridad Plug & Play de nivel empresarial para FastAPI. 33+ módulos: CORS, JWT, Rate Limiting, MFA, WebAuthn, OAuth2, RBAC, Prompt Injection, Malware Scan, XXE Protection, AWS WAF Bridge, Threat Intelligence (8 fuentes), GraphQL Security, Secrets Rotation y Auditoría Encriptada. 1958 tests.",
+      tags: ['Python', 'FastAPI', 'Seguridad', 'PyPI', 'AWS WAF'],
       repoUrl: "https://github.com/Samuel-Urrego/Araxys",
       demoUrl: "https://pypi.org/project/araxys/",
       image: "/araxyslogo.png"
@@ -152,11 +167,26 @@ export const projectsContent = {
     {
       id: "LIB_02",
       name: "SINGULARITYSQL",
-      description: "Librería Python + CLI que conecta SQL Server con Pydantic v2. Auto-genera modelos de datos tipados a partir de metadatos de stored procedures — sin mapeo manual. Tres estrategias de versión (Modern, Legacy, Azure).",
-      tags: ['Python', 'SQL Server', 'Pydantic v2', 'CLI'],
+      description: "Librería Python + CLI que conecta SQL Server con Pydantic v2. Auto-genera modelos tipados desde metadatos de stored procedures — sin mapeo manual. Tres estrategias: Modern (2016+), Legacy (2008-2014), Azure SQL. Salida dinámica o código fuente.",
+      tags: ['Python', 'SQL Server', 'Pydantic v2', 'CLI', 'Code Gen'],
       repoUrl: "https://github.com/Samuel-Urrego/Singularity",
       demoUrl: "https://pypi.org/project/singularitysql/",
       image: "/singularity-logo.png"
+    },
+    {
+      id: "MCP_01",
+      name: "SQLSERVERMCP",
+      description: "Servidor MCP (Model Context Protocol) para SQL Server construido con .NET 10. Permite que agentes de IA exploren esquemas de BD, índices, stored procedures y ejecuten consultas read-only. 7 herramientas con seguridad en profundidad.",
+      tags: ['.NET 10', 'MCP', 'SQL Server', 'C#', 'AI Agents'],
+      repoUrl: "https://github.com/Samuel-Urrego/SQLSERVERMCP",
+      image: "/sqlservermcp-logo.png"
+    },
+    {
+      id: "PROYECTO_03",
+      name: "SUITE",
+      description: "Portal corporativo empresarial para Porcicarnes S.A. Construido con .NET 10, Blazor y Clean Architecture. 11 módulos: Soporte TI, Financiera, Transporte, RH, Nómina, Publicidad y más. Integra Microsoft Entra ID, APICENTRAL Gateway, DIAN, SharePoint y Google Maps. Dapper + stored procedures con auditoría completa. 83+ SPs y 168 tests.",
+      tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'MudBlazor', 'SQL Server', 'Entra ID'],
+      repoUrl: undefined
     }
   ]
 };
@@ -164,14 +194,24 @@ export const projectsContent = {
 export const logsContent = {
   en: [
     {
+      date: "2026.07.22 @ 14:00:00",
+      title: "SUITE V1 — ENTERPRISE PORTAL ARCHITECTURE",
+      description: "Delivered SUITE, a corporate portal with 11 modules for IT support, accounting, transport, HR, and marketing. .NET 10 + Blazor + Clean Architecture with 83+ stored procedures, APICENTRAL Gateway integration, and full audit trail."
+    },
+    {
+      date: "2026.07.22 @ 10:00:00",
+      title: "SQLSERVERMCP RELEASE",
+      description: "Published SqlServerMcp — an MCP (Model Context Protocol) server for SQL Server built with .NET 10. Lets AI agents explore database schemas, indexes, stored procedures, and execute read-only queries with defense-in-depth security."
+    },
+    {
       date: "2026.05.26 @ 14:30:00",
       title: "SINGULARITYSQL LIB RELEASE",
       description: "Published SingularitySQL to PyPI — a Python library + CLI that auto-generates Pydantic v2 models from SQL Server stored procedure metadata with zero manual mapping."
     },
     {
       date: "2026.05.15 @ 12:00:00",
-      title: "ARAXYS SECURITY LIB RELEASE",
-      description: "Published Araxys to PyPI, offering a comprehensive security suite for FastAPI developers to implement enterprise-grade protection with minimal configuration."
+      title: "ARAXYS V0.14 — AWS WAF, THREAT INTEL, GRAPHQL SECURITY",
+      description: "Published Araxys v0.14 to PyPI with AWS WAF Bridge (OpenAPI → WAF rules), Threat Intelligence Feeds (8 sources), GraphQL Security, Security Headers Audit, and Dynamic Secrets Rotation. 1958 tests across 33+ modules."
     },
     {
       date: "2026.05.10 @ 10:00:00",
@@ -191,14 +231,24 @@ export const logsContent = {
   ],
   es: [
     {
+      date: "22.07.2026 @ 14:00:00",
+      title: "SUITE V1 — ARQUITECTURA PORTAL CORPORATIVO",
+      description: "Entregué SUITE, un portal corporativo con 11 módulos para soporte TI, finanzas, transporte, RH y publicidad. .NET 10 + Blazor + Clean Architecture con 83+ stored procedures, integración con APICENTRAL Gateway y auditoría completa."
+    },
+    {
+      date: "22.07.2026 @ 10:00:00",
+      title: "LANZAMIENTO DE SQLSERVERMCP",
+      description: "Publicación de SqlServerMcp — un servidor MCP (Model Context Protocol) para SQL Server construido con .NET 10. Permite que agentes de IA exploren esquemas de BD, índices, stored procedures y ejecuten consultas read-only con seguridad en profundidad."
+    },
+    {
       date: "26.05.2026 @ 14:30:00",
       title: "LANZAMIENTO DE SINGULARITYSQL LIB",
       description: "Publicación de SingularitySQL en PyPI — una librería Python + CLI que auto-genera modelos Pydantic v2 desde metadatos de stored procedures de SQL Server sin mapeo manual."
     },
     {
       date: "15.05.2026 @ 12:00:00",
-      title: "LANZAMIENTO DE ARAXYS SECURITY LIB",
-      description: "Publicación de Araxys en PyPI, ofreciendo una suite de seguridad integral para desarrolladores FastAPI para implementar protección empresarial con mínima configuración."
+      title: "ARAXYS V0.14 — AWS WAF, THREAT INTEL, GRAPHQL SECURITY",
+      description: "Publicación de Araxys v0.14 en PyPI con AWS WAF Bridge (OpenAPI → reglas WAF), Threat Intelligence Feeds (8 fuentes), GraphQL Security, Security Headers Audit y Dynamic Secrets Rotation. 1958 tests en 33+ módulos."
     },
     {
       date: "10.05.2026 @ 10:00:00",
