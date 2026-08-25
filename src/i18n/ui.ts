@@ -11,6 +11,7 @@ export const ui = {
     'nav.projects': 'Projects',
     'nav.log': 'Log',
     'nav.connect': 'Connect',
+    'nav.resume': 'Resume.PDF',
     'hero.status': '// SYSTEM STATUS: OPTIMIZED',
     'hero.title.backend': 'Backend',
     'hero.title.architect': 'Architect',
@@ -23,13 +24,13 @@ export const ui = {
     'modal.warning': '> [WARNING]: Remote credentials server currently unreachable. Displaying cached entries only.',
     'modal.action_locked': '[ LOCKED_IN_OFFICE ]',
     'footer.rights': '© 2026 SYSTEM_ARCHITECT. ALL RIGHTS RESERVED.',
-    'footer.linkedin': 'LINKEDIN_LOCKED'
   },
   es: {
     'nav.stack': 'Tecnologías',
     'nav.projects': 'Proyectos',
     'nav.log': 'Bitácora',
     'nav.connect': 'Contacto',
+    'nav.resume': 'Currículum.PDF',
     'hero.status': '// ESTADO DEL SISTEMA: OPTIMIZADO',
     'hero.title.backend': 'Arquitecto',
     'hero.title.architect': 'Backend',
@@ -42,7 +43,6 @@ export const ui = {
     'modal.warning': '> [ADVERTENCIA]: Servidor de credenciales remoto inalcanzable. Mostrando solo entradas en caché.',
     'modal.action_locked': '[ BLOQUEADO_EN_OFICINA ]',
     'footer.rights': '© 2026 ARQUITECTO_SISTEMAS. TODOS LOS DERECHOS RESERVADOS.',
-    'footer.linkedin': 'LINKEDIN_BLOQUEADO'
   },
 } as const;
 

@@ -54,9 +54,13 @@ const t = useTranslations(lang);
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
 			</button>
 			
-			<button class="hidden lg:block bg-purple-600 text-white font-outfit text-xs tracking-widest uppercase px-4 py-2 hover:bg-purple-500 transition-colors shadow-[4px_4px_0px_0px_rgba(236,72,153,1)]">
-				Resume.PDF
-			</button>
+			<a
+				href={lang === 'es' ? '/CVES.pdf' : '/CVEN.pdf'}
+				download
+				class="hidden lg:block bg-purple-600 text-white font-outfit text-xs tracking-widest uppercase px-4 py-2 hover:bg-purple-500 transition-colors shadow-[4px_4px_0px_0px_rgba(236,72,153,1)]"
+			>
+				{t('nav.resume')}
+			</a>
 		</header>
 
 		<!-- Mobile Menu Overlay -->
@@ -80,7 +84,7 @@ const t = useTranslations(lang);
 		<footer class="relative z-10 max-w-7xl mx-auto px-6 py-12 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-zinc-500 font-mono">
 			<div class="flex gap-6">
 				<a href="https://github.com/Samuel-Urrego" target="_blank" class="hover:text-purple-400 transition-colors">GITHUB</a>
-				<span class="opacity-30">{t('footer.linkedin')}</span>
+				<a href="https://www.linkedin.com/in/samuel-esteban-urrego-valencia-8a9b9126a/" target="_blank" class="hover:text-purple-400 transition-colors">LINKEDIN</a>
 				<a href="mailto:urregodev@gmail.com" class="hover:text-purple-400 transition-colors">{t('nav.connect')}</a>
 			</div>
 			<div>
