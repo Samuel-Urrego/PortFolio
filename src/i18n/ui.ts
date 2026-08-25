@@ -276,6 +276,20 @@ export const credentialsContent = {
       tags: ['BEST STUDENT', 'TOP PERFORMANCE'],
       actionLabel: "[ VIEW_DIPLOMA ]",
       actionUrl: "/DiplomaSENA.pdf"
+    },
+    {
+      title: "AI INTRODUCTION COURSE",
+      institution: "SENA - COLOMBIA",
+      tags: ['ARTIFICIAL INTELLIGENCE'],
+      actionLabel: "[ VIEW_CERTIFICATE ]",
+      actionUrl: "/IASENA.pdf"
+    },
+    {
+      title: "POWER BI DATA VISUALIZATION COURSE",
+      institution: "SENA - COLOMBIA",
+      tags: ['DATA VISUALIZATION', 'POWER BI'],
+      actionLabel: "[ VIEW_CERTIFICATE ]",
+      actionUrl: "/PowerBISENA.pdf"
     }
   ],
   es: [
@@ -285,6 +299,20 @@ export const credentialsContent = {
       tags: ['MEJOR ESTUDIANTE', 'ALTO RENDIMIENTO'],
       actionLabel: "[ VER_DIPLOMA ]",
       actionUrl: "/DiplomaSENA.pdf"
+    },
+    {
+      title: "CURSO DE INICIACIÓN A LA IA",
+      institution: "SENA - COLOMBIA",
+      tags: ['INTELIGENCIA ARTIFICIAL'],
+      actionLabel: "[ VER_CERTIFICADO ]",
+      actionUrl: "/IASENA.pdf"
+    },
+    {
+      title: "CURSO DE VISUALIZACIÓN DE DATOS CON POWER BI",
+      institution: "SENA - COLOMBIA",
+      tags: ['VISUALIZACIÓN DE DATOS', 'POWER BI'],
+      actionLabel: "[ VER_CERTIFICADO ]",
+      actionUrl: "/PowerBISENA.pdf"
     }
   ]
 };
