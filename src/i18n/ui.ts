@@ -275,7 +275,7 @@ export const credentialsContent = {
       institution: "SENA - COLOMBIA",
       tags: ['BEST STUDENT', 'TOP PERFORMANCE'],
       actionLabel: "[ VIEW_DIPLOMA ]",
-      actionUrl: "/TecnicaSENA.pdf"
+      actionUrl: "/DiplomaSENA.pdf"
     }
   ],
   es: [
@@ -284,7 +284,7 @@ export const credentialsContent = {
       institution: "SENA - COLOMBIA",
       tags: ['MEJOR ESTUDIANTE', 'ALTO RENDIMIENTO'],
       actionLabel: "[ VER_DIPLOMA ]",
-      actionUrl: "/TecnicaSENA.pdf"
+      actionUrl: "/DiplomaSENA.pdf"
     }
   ]
 };
