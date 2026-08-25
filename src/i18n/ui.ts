@@ -274,8 +274,8 @@ export const credentialsContent = {
       title: "SENA ACADEMIC RECOGNITION",
       institution: "SENA - COLOMBIA",
       tags: ['BEST STUDENT', 'TOP PERFORMANCE'],
-      actionLabel: "[ LOCKED_IN_OFFICE ]",
-      actionUrl: "#"
+      actionLabel: "[ VIEW_DIPLOMA ]",
+      actionUrl: "/TecnicaSENA.pdf"
     }
   ],
   es: [
@@ -283,8 +283,8 @@ export const credentialsContent = {
       title: "RECONOCIMIENTO ACADÉMICO SENA",
       institution: "SENA - COLOMBIA",
       tags: ['MEJOR ESTUDIANTE', 'ALTO RENDIMIENTO'],
-      actionLabel: "[ BLOQUEADO_EN_OFICINA ]",
-      actionUrl: "#"
+      actionLabel: "[ VER_DIPLOMA ]",
+      actionUrl: "/TecnicaSENA.pdf"
     }
   ]
 };
