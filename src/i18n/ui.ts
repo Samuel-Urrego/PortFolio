@@ -116,6 +116,41 @@ export const projectsContent = {
       description: "Enterprise corporate portal for Porcicarnes S.A. Built with .NET 10, Blazor, and Clean Architecture. 11 modules: IT Support, Accounting, Transport, HR, Payroll, Marketing, and more. Integrates Microsoft Entra ID, APICENTRAL Gateway, DIAN, SharePoint, and Google Maps. Dapper + stored procedures with audit trail across 83+ SPs and 168 tests.",
       tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'MudBlazor', 'SQL Server', 'Entra ID'],
       repoUrl: undefined
+    },
+    {
+      id: "PROJECT_04",
+      name: "ADMIN_COMMITTEE",
+      description: "Corporate committee-management portal: session planning, minutes, derived tasks and auditable follow-up. .NET 10 + Blazor Interactive Server with Clean Architecture and MVVM (CommunityToolkit), EF Core + SQL Server, Microsoft Planner sync, PDF actas via QuestPDF, AES-256-GCM encrypted settings and Entra ID.",
+      tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'MVVM', 'EF Core', 'Entra ID'],
+      repoUrl: undefined
+    },
+    {
+      id: "PROJECT_05",
+      name: "ADMIN_MINUTA",
+      description: "Web migration of a legacy WinForms desktop app (.NET Framework 4.7.2) to a Blazor Web App on .NET 10. Clean Architecture with Dapper over stored procedures only, plus architecture guardrail tests that break the build on violations. TOTP gate + PBKDF2-hashed credentials for operators and Entra ID for admins.",
+      tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'Dapper', 'SQL Server', 'Migration'],
+      repoUrl: undefined
+    },
+    {
+      id: "PROJECT_06",
+      name: "SUITEAGENT",
+      description: "Remote provisioning system for SUITE. A self-contained Windows worker service (win-x64) that connects over SignalR and prepares machines on command: firewall, power and regional settings, .NET runtimes and unattended software installs, reporting live progress back to the portal. Ships with a one-click installer that registers the Windows service and verifies it stays up.",
+      tags: ['.NET 10', 'Worker Service', 'SignalR', 'Windows Service', 'Automation', 'PowerShell'],
+      repoUrl: undefined
+    },
+    {
+      id: "API_01",
+      name: "ADMIN_API_SECRETS",
+      description: "Standalone ASP.NET Core API that hands an application its configuration secrets after validating its Entra object ID and a TOTP code. Configuration-only, no database: every value is AES-256-GCM encrypted, responses are no-store, and requests are rate-limited and filtered by a per-application source IP allowlist. Built to swap to a managed secret provider without code changes.",
+      tags: ['ASP.NET Core', 'Entra ID', 'TOTP', 'AES-256-GCM', 'Secrets', 'API'],
+      repoUrl: undefined
+    },
+    {
+      id: "STACK_01",
+      name: "ANTIOQUENA_AI_STACK",
+      description: "Installable AI skill stack that gives coding agents the company's engineering standards as runtime contracts. 38 skills, 19 specialist sub-agents, 22 slash commands and a Broski Code orchestrator, plus an enforcement layer: build-breaking architecture guardrails, an SP-only data scaffold, a deterministic command guard and a real dotnet new Clean Architecture template. Installs into OpenCode, Claude Code, Codex and Antigravity.",
+      tags: ['AI Agents', 'Skills', '.NET 10', 'CLI', 'Enterprise', 'SDD'],
+      repoUrl: undefined
     }
   ],
   es: [
@@ -187,12 +222,72 @@ export const projectsContent = {
       description: "Portal corporativo empresarial para Porcicarnes S.A. Construido con .NET 10, Blazor y Clean Architecture. 11 módulos: Soporte TI, Financiera, Transporte, RH, Nómina, Publicidad y más. Integra Microsoft Entra ID, APICENTRAL Gateway, DIAN, SharePoint y Google Maps. Dapper + stored procedures con auditoría completa. 83+ SPs y 168 tests.",
       tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'MudBlazor', 'SQL Server', 'Entra ID'],
       repoUrl: undefined
+    },
+    {
+      id: "PROYECTO_04",
+      name: "ADMIN_COMMITTEE",
+      description: "Portal corporativo de gestión de comités: planificación de sesiones, actas, tareas derivadas y seguimiento auditable. .NET 10 + Blazor Interactive Server con Clean Architecture y MVVM (CommunityToolkit), EF Core + SQL Server, sincronización con Microsoft Planner, actas en PDF (QuestPDF), configuración cifrada con AES-256-GCM y Entra ID.",
+      tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'MVVM', 'EF Core', 'Entra ID'],
+      repoUrl: undefined
+    },
+    {
+      id: "PROYECTO_05",
+      name: "ADMIN_MINUTA",
+      description: "Migración web de una aplicación de escritorio legacy en WinForms (.NET Framework 4.7.2) a Blazor Web App sobre .NET 10. Clean Architecture con Dapper exclusivamente sobre stored procedures, más tests de arquitectura que rompen el build ante violaciones. Puerta TOTP + credenciales hasheadas (PBKDF2) para operadores y Entra ID para administradores.",
+      tags: ['.NET 10', 'Blazor', 'Clean Architecture', 'Dapper', 'SQL Server', 'Migración'],
+      repoUrl: undefined
+    },
+    {
+      id: "PROYECTO_06",
+      name: "SUITEAGENT",
+      description: "Sistema de aprovisionamiento remoto de SUITE. Un worker self-contained de Windows (win-x64) que se conecta por SignalR y prepara equipos por comando: firewall, energía y configuración regional, runtimes de .NET e instalaciones de software desatendidas, reportando el progreso en vivo al portal. Incluye un instalador de un solo clic que registra el servicio de Windows y verifica que quede corriendo.",
+      tags: ['.NET 10', 'Worker Service', 'SignalR', 'Windows Service', 'Automatización', 'PowerShell'],
+      repoUrl: undefined
+    },
+    {
+      id: "API_01",
+      name: "ADMIN_API_SECRETS",
+      description: "API ASP.NET Core independiente que entrega a una aplicación sus secretos de configuración tras validar su Entra object ID y un código TOTP. Solo configuración, sin base de datos: cada valor va cifrado con AES-256-GCM, las respuestas son no-store y las peticiones tienen rate limit y allowlist de IP por aplicación. Pensada para migrar a un proveedor de secretos gestionado sin cambios de código.",
+      tags: ['ASP.NET Core', 'Entra ID', 'TOTP', 'AES-256-GCM', 'Secretos', 'API'],
+      repoUrl: undefined
+    },
+    {
+      id: "STACK_01",
+      name: "ANTIOQUENA_AI_STACK",
+      description: "Stack de IA instalable que entrega a los agentes de código los estándares de ingeniería de la empresa como contratos de runtime. 38 skills, 19 sub-agentes especialistas, 22 comandos y un orquestador (Broski Code), más una capa de enforcement: guardrails de arquitectura que rompen el build, scaffold de datos SP-only, guard determinístico de comandos y un template real de Clean Architecture para dotnet new. Se instala en OpenCode, Claude Code, Codex y Antigravity.",
+      tags: ['Agentes IA', 'Skills', '.NET 10', 'CLI', 'Empresarial', 'SDD'],
+      repoUrl: undefined
     }
   ]
 };
 
 export const logsContent = {
   en: [
+    {
+      date: "2026.10.09 @ 09:00:00",
+      title: "ADMIN-API-SECRETS RELEASE",
+      description: "Shipped ADMIN-API-SECRETS — a standalone API that delivers an application's secrets after validating its Entra object ID and a TOTP code. No database; every value AES-256-GCM encrypted, with rate limiting and a per-application source IP allowlist. Now the secrets source for ADMIN-COMMITTEE and ADMIN-MINUTA."
+    },
+    {
+      date: "2026.10.02 @ 15:00:00",
+      title: "ANTIOQUEÑA AI STACK RELEASE",
+      description: "Delivered the Antioqueña AI Stack — 38 skills, 19 specialist sub-agents and 22 commands plus the Broski Code orchestrator, installable into OpenCode, Claude Code, Codex and Antigravity, backed by an enforcement layer of build-breaking architecture guardrails and a real dotnet new Clean Architecture template."
+    },
+    {
+      date: "2026.09.25 @ 10:00:00",
+      title: "ADMIN-MINUTA WEB MIGRATION",
+      description: "Started migrating the legacy Minuta desktop app (WinForms / .NET Framework 4.7.2) to a Blazor Web App on .NET 10 with Clean Architecture and Dapper over stored procedures only, protected by architecture guardrails that break the build."
+    },
+    {
+      date: "2026.09.11 @ 10:00:00",
+      title: "SUITEAGENT PROVISIONING AGENT",
+      description: "Built SuiteAgent — a self-contained Windows worker service that connects to SUITE over SignalR and prepares machines on command: system setup, .NET runtimes and unattended software installs, with live progress in the portal and a one-click installer that registers the Windows service."
+    },
+    {
+      date: "2026.08.18 @ 09:00:00",
+      title: "ADMIN-COMMITTEE RELEASE",
+      description: "Delivered ADMIN-COMMITTEE — a corporate portal for planning committee sessions, generating actas and tracking their derived tasks. .NET 10 + Blazor with Clean Architecture and MVVM, EF Core, Microsoft Planner sync, QuestPDF actas and Entra ID."
+    },
     {
       date: "2026.07.22 @ 14:00:00",
       title: "SUITE V1 — ENTERPRISE PORTAL ARCHITECTURE",
@@ -230,6 +325,31 @@ export const logsContent = {
     }
   ],
   es: [
+    {
+      date: "09.10.2026 @ 09:00:00",
+      title: "LANZAMIENTO DE ADMIN-API-SECRETS",
+      description: "Publiqué ADMIN-API-SECRETS — una API independiente que entrega los secretos de una aplicación tras validar su Entra object ID y un código TOTP. Sin base de datos; cada valor cifrado con AES-256-GCM, con rate limit y allowlist de IP por aplicación. Hoy es la fuente de secretos de ADMIN-COMMITTEE y ADMIN-MINUTA."
+    },
+    {
+      date: "02.10.2026 @ 15:00:00",
+      title: "LANZAMIENTO DEL STACK DE IA ANTIOQUEÑA",
+      description: "Entregué el Stack de IA Antioqueña — 38 skills, 19 sub-agentes especialistas y 22 comandos más el orquestador Broski Code, instalables en OpenCode, Claude Code, Codex y Antigravity, con una capa de enforcement de guardrails de arquitectura que rompen el build y un template real de Clean Architecture para dotnet new."
+    },
+    {
+      date: "25.09.2026 @ 10:00:00",
+      title: "MIGRACIÓN WEB DE ADMIN-MINUTA",
+      description: "Inicié la migración de la app legacy Minuta (WinForms / .NET Framework 4.7.2) a una Blazor Web App sobre .NET 10 con Clean Architecture y Dapper exclusivamente sobre stored procedures, protegida por guardrails de arquitectura que rompen el build."
+    },
+    {
+      date: "11.09.2026 @ 10:00:00",
+      title: "AGENTE DE APROVISIONAMIENTO SUITEAGENT",
+      description: "Construí SuiteAgent — un worker self-contained de Windows que se conecta a SUITE por SignalR y prepara equipos por comando: configuración del sistema, runtimes de .NET e instalaciones desatendidas, con progreso en vivo en el portal y un instalador de un solo clic que registra el servicio de Windows."
+    },
+    {
+      date: "18.08.2026 @ 09:00:00",
+      title: "LANZAMIENTO DE ADMIN-COMMITTEE",
+      description: "Entregué ADMIN-COMMITTEE — un portal corporativo para planificar sesiones de comités, generar actas y hacer seguimiento de las tareas derivadas. .NET 10 + Blazor con Clean Architecture y MVVM, EF Core, sincronización con Microsoft Planner, actas en PDF (QuestPDF) y Entra ID."
+    },
     {
       date: "22.07.2026 @ 14:00:00",
       title: "SUITE V1 — ARQUITECTURA PORTAL CORPORATIVO",
